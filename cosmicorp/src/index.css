@@ -20,6 +20,13 @@ body {
 header .logo {
     font-weight: 600;
     font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 500ms ease;
+}
+
+header .logo:hover {
+    color: #9D4EDD;
 }
 
 header ul.nav {
@@ -44,9 +51,11 @@ header .presentation {
     height: 470px;
     background-size: cover;
     background-blend-mode: multiply;
-    background: #121212 url('./img/4.jpg') no-repeat center center;
+    background: #bcbcbc url('./img/main3.jpg') no-repeat center center;
     position: relative;
+    border-radius: 30px;
 }
+
 
 header .presentation::after {
     content: 'Touch the future';
@@ -57,6 +66,7 @@ header .presentation::after {
     font-size: 40px;
     font-weight: 600;
     color: #fff;
+    transition: color 500ms ease, text-shadow 1000ms ease;
 }
 
 header .presentation::before {
@@ -68,6 +78,67 @@ header .presentation::before {
     font-size: 15px;
     font-weight: 300;
     color: #fff;
+}
+
+header .presentation:hover::after {
+    color: #ff9e00;
+    text-shadow: 0 0 10px #ff9e00;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #1d1e22;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, main p, main b {
+    margin: 10px 20px;
+    color: #ffffff;
+}
+
+main b {
+    color: #9D4EDD
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #3C096C;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+main .add-to-cart:hover {
+    transform: scale(1.5) translateY(-5px);
 }
 
 footer {
