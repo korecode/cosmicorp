@@ -22,13 +22,29 @@ header .logo {
     font-size: 20px;
 }
 
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: color 500ms ease;
+}
+
+header ul.nav li:hover {
+    color: #ff9e00;
+}
+
 header .presentation {
     margin: 50px 0;
     width: 100%;
     height: 470px;
     background-size: cover;
     background-blend-mode: multiply;
-    background: #bcbcbc url('./img/4.jpg') no-repeat center center;
+    background: #121212 url('./img/4.jpg') no-repeat center center;
     position: relative;
 }
 
@@ -52,4 +68,9 @@ header .presentation::before {
     font-size: 15px;
     font-weight: 300;
     color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
 }
