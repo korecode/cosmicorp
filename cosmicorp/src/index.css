@@ -17,6 +17,10 @@ body {
     margin: 50px auto;
 }
 
+header {
+    position: relative;
+}
+
 header .logo {
     font-weight: 600;
     font-size: 20px;
@@ -28,6 +32,7 @@ header .logo {
 header .logo:hover {
     color: #9D4EDD;
 }
+
 
 header ul.nav {
     float: right;
@@ -43,6 +48,32 @@ header ul.nav li {
 
 header ul.nav li:hover {
     color: #ff9e00;
+}
+
+header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    transition: color 500ms ease, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #ff9e00;
+    transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background: #1d1e22;
+    border-radius: 30px;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(157, 78, 221, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(157, 78, 221, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(157, 78, 221, 0.2);
+    z-index: 1000;
 }
 
 header .presentation {
@@ -66,7 +97,7 @@ header .presentation::after {
     font-size: 40px;
     font-weight: 600;
     color: #fff;
-    transition: color 500ms ease, text-shadow 1000ms ease;
+    transition: animation 500ms ease, text-shadow 500ms ease, transform 500ms ease, color 500ms ease;
 }
 
 header .presentation::before {
@@ -82,8 +113,28 @@ header .presentation::before {
 
 header .presentation:hover::after {
     color: #ff9e00;
-    text-shadow: 0 0 10px #ff9e00;
+    animation: glow 800ms infinite;
+    animation-duration: 3200ms;
+
 }
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 0 #ff9e00;
+    }
+
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 10px #ff9e00;
+    }
+
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 #ff9e00;
+    }
+}
+
 
 main {
     display: flex;
@@ -145,3 +196,4 @@ footer {
     text-align: center;
     margin-top: 100px;
 }
+
