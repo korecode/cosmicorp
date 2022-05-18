@@ -5,14 +5,14 @@ import Order from "./Order";
 const showOrders = (props) => {
     return(<div>
         {props.orders.map(el => (
-            <Order key={el.id} item={el} />
+            <Order onDelete={props.onDelete} key={el.id} item={el} />
         ))}
     </div>)
 }
 
 const showNothing = () => {
     return (<div className='empty'>
-        <h2>Корзина пуста</h2>
+        <h2>Empty</h2>
     </div>)
 }
 
@@ -27,9 +27,10 @@ export default function Header(props) {
                     Cosmicorp.
                 </span>
                 <ul className='nav'>
-                    <li>Про нас</li>
-                    <li>Контакты</li>
-                    <li>Кабинет</li>
+                    <li><a href='#' class='active'>Home</a></li>
+                    <li><a href='#'>About us</a></li>
+                    <li><a href='#'>Contacts</a></li>
+                    <li><a href='#'>Profile</a></li>
                 </ul>
                 <FaShoppingBasket onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`} />
 

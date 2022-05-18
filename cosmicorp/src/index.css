@@ -12,6 +12,7 @@ body {
     font-weight: 300;
 }
 
+
 .wrapper {
     width: 1280px;
     margin: 50px auto;
@@ -43,11 +44,25 @@ header ul.nav li {
     display: inline;
     margin-left: 25px;
     cursor: pointer;
-    transition: color 500ms ease;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 500ms ease, color 500ms ease;
 }
 
-header ul.nav li:hover {
-    color: #ff9e00;
+header ul.nav li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background 500ms ease, color 500ms ease;
+}
+
+header ul.nav li a:hover,
+header ul.nav li a.active
+{
+    background: #FF9E00FF;
+    color: #111112;
+    border-radius: 20px;
 }
 
 header .shop-cart-button {
@@ -87,21 +102,37 @@ header .shop-cart .item {
     margin-bottom: 20px;
 }
 
+
 header .shop-cart .item img {
     width: 70px;
-    float: right;
+    float: left;
     margin-right: 20px;
     border-radius: 10px;
 }
 
 header .shop-cart .item h2 {
     width: 20px;
+    right: 200px;
     margin-bottom: 10px;
 }
 
-header .shop-cart .item p {
+header .shop-cart .item b {
     color: #9D4EDD;
     font-weight: 600;
+}
+
+header .shop-cart .item .delete-icon {
+    color: #ff9e00;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color 500ms ease, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color: #9D4EDD;
+    transform: scale(1.5);
 }
 
 header .presentation {
@@ -113,8 +144,11 @@ header .presentation {
     background: #bcbcbc url('./img/main3.jpg') no-repeat center center;
     position: relative;
     border-radius: 30px;
+    transition: transform 500ms ease;
 }
 
+header .presentation:hover {
+}
 
 header .presentation::after {
     content: 'Touch the future';
@@ -129,7 +163,7 @@ header .presentation::after {
 }
 
 header .presentation::before {
-    content: 'по низким ценам';
+    content: 'Little NFT store';
     position: absolute;
     top: 200px;
     left: 50px;
@@ -172,13 +206,13 @@ main {
 }
 
 main .item {
-    width: 30%;
+    width: 21%;
     margin-bottom: 50px;
     background: #1d1e22;
     overflow: hidden;
     position: relative;
     padding-bottom: 20px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 30px;
 }
 
 main .item img {
@@ -221,7 +255,14 @@ main .add-to-cart:hover {
 }
 
 footer {
+    height: 40px;
+    width: 100%;
     text-align: center;
-    margin-top: 100px;
+    padding-top: 20px;
+    border-radius: 30px 30px 0 0;
+    background-color: #1d1e22;
+    margin: 70px 0 -70px;
+    font-weight: 600;
+    color: #9D4EDD;
 }
 

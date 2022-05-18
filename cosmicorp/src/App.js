@@ -11,41 +11,118 @@ class App extends React.Component {
             items: [
                 {
                     id: 1,
-                    title: 'STAMINA BOOSTER',
+                    title: 'Libra',
                     img: '1.png',
-                    desc: 'Increases max stamina by 50%',
+                    desc: 'Astro Zxdiac',
                     category: 'Booster',
                     price: '450'
                 },
                 {
                     id: 2,
-                    title: 'RAM JOLT',
+                    title: 'Virgo',
                     img: '2.png',
-                    desc: 'Increases max RAM by 2',
+                    desc: 'Astro Zxdiac',
                     category: 'Booster',
                     price: '1125'
                 },
                 {
                     id: 3,
-                    title: 'HEALTH BOOSTER',
-                    img: 'health_booster_consumables.png',
-                    desc: 'Increases max health by 20%',
+                    title: 'Pisces',
+                    img: '3.png',
+                    desc: 'Astro Zxdiac',
                     category: 'Booster',
                     price: '2250'
+                },
+                {
+                    id: 4,
+                    title: 'Scorpio',
+                    img: '4.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 5,
+                    title: 'Leo',
+                    img: '5.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 6,
+                    title: 'Aries',
+                    img: '6.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 7,
+                    title: 'Aquarius',
+                    img: '7.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 8,
+                    title: 'Taurus',
+                    img: '8.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 9,
+                    title: 'Capricorn',
+                    img: '9.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 10,
+                    title: 'Gemini',
+                    img: '10.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 11,
+                    title: 'Sagittarius',
+                    img: '11.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
+                },
+                {
+                    id: 12,
+                    title: 'Cancer',
+                    img: '12.png',
+                    desc: 'Astro Zxdiac',
+                    category: 'Booster',
+                    price: '450'
                 }
             ]
         }
         this.addToOrder = this.addToOrder.bind(this)
+        this.deleteOrder = this.deleteOrder.bind(this)
     }
 
     render() {
         return (
             <div className="wrapper">
-                <Header orders={this.state.orders}/>
+                <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
                 <Items items={this.state.items} onAdd={this.addToOrder} />
                 <Footer/>
             </div>
         )
+    }
+
+    deleteOrder(id) {
+        this.setState({orders: this.state.orders.filter(el => el.id !== id)})
     }
 
     addToOrder(item) {
