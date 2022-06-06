@@ -198,6 +198,30 @@ header .presentation:hover::after {
     }
 }
 
+.full-item {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(60, 9, 108, 0.8);
+    z-index: 10000;
+    overflow: auto;
+}
+
+.full-item img {
+    width: 600px;
+    height: 600px;
+    border-radius: 30px;
+}
+
+.full-item > div {
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #1d1e22;
+}
 
 main {
     display: flex;
@@ -216,26 +240,30 @@ main .item {
     border-radius: 30px;
 }
 
-main .item img {
+main .item img, .full-item .item img {
     width: 100%;
     border-radius: 10px 10px 0 0;
     transition: transform 500ms ease;
+    cursor: pointer;
 }
 
-main .item img:hover {
+main .item img:hover, .full-item .item img:hover {
     transform: scale(1.05);
 }
 
-main h2, main p, main b {
+main h2, .full-item h2, main p, .full-item p, main b,
+.full-item b {
     margin: 10px 20px;
     color: #ffffff;
 }
 
-main b {
+main b,
+.full-item b {
     color: #9D4EDD
 }
 
-main .add-to-cart {
+main .add-to-cart,
+.full-item .add-to-cart {
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -251,7 +279,8 @@ main .add-to-cart {
     transition: transform 500ms ease;
 }
 
-main .add-to-cart:hover {
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
     transform: scale(1.5) translateY(-5px);
 }
 
