@@ -14,7 +14,7 @@ body {
 
 
 .wrapper {
-    width: 80%;
+    width: 98%;
     max-width: 1280px;
     margin: 50px auto;
 }
@@ -142,7 +142,7 @@ header .presentation {
     height: 470px;
     background-size: cover;
     background-blend-mode: multiply;
-    background: #bcbcbc url('./img/main3.jpg') no-repeat center center;
+    background: #bcbcbc url('./img/main.gif') no-repeat center center;
     position: relative;
     border-radius: 30px;
     transition: transform 500ms ease;
@@ -267,3 +267,15 @@ footer {
     color: #9D4EDD;
 }
 
+.player-container {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    padding: 20px;
+    border: 1px solid rgba(137, 44, 204, 0.4);
+    z-index: 2000;
+    background-color: #1d1e22;
+    width: 7rem;
+    height: 10px;
+    border-radius: 30px 30px 30px 30px;
+}

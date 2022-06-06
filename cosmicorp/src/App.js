@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Items from "./components/Items";
+import Player from "./Player";
 
 class App extends React.Component {
     constructor(props) {
@@ -115,6 +116,7 @@ class App extends React.Component {
         return (
             <div className="wrapper">
                 <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
+                <Player className='player-container'></Player>
                 <Items items={this.state.items} onAdd={this.addToOrder} />
                 <Footer/>
             </div>

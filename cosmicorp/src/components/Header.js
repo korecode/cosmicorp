@@ -23,7 +23,6 @@ export default function Header(props) {
         <header>
             <div>
                 <span className='logo'>
-                    <span className='pulse'></span>
                     Cosmicorp.
                 </span>
                 <ul className='nav'>
